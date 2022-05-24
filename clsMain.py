@@ -1,3 +1,4 @@
+##Angie Carolina Gómez-Maria Fernanda Martínez-Juan Esteban Ruiz
 from src.clsControlador import Controlador
 
 class Main:

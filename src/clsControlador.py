@@ -36,7 +36,6 @@ class Controlador:
         print("No existe un evento con ese nombre :(")
 
     def mostrar(self):
-        self.obtenerDatos()
         for event in self.listaEventos:
             print("------------------------------------------------------------------------------------")
             print("Código: ", event.codigo)
@@ -59,6 +58,7 @@ class Controlador:
     def crearEvento(self,cod, nombre, numEntradas, fecha):
         evento =Evento(cod,nombre,numEntradas,fecha) 
         Conexion.insertarDatos(evento)
+        self.obtenerDatos()
 
         
         

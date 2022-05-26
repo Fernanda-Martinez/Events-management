@@ -46,7 +46,7 @@ class Controlador:
     def comprarEntrada(self, cod, entradas):
         bc = self.buscarCodigo(cod)
         fechaAct = datetime.today()
-        if bc.numEntradas > 0 or bc.numEntradas - entradas < 0:
+        if bc.numEntradas > 0 and bc.numEntradas - entradas > 0:
             if fechaAct < bc.fecha :
                Conexion.actualizarEntradas(bc,bc.numEntradas - entradas)
                self.obtenerDatos()
